@@ -5,5 +5,8 @@ def cube(x):
 
 funcs = [square, cube]
 for r in range(5):
-    print(map(lambda x: x(r), funcs))
+    funcssq=list(map(lambda x: x(r), funcs))
+    print(funcssq)
+
+
 
