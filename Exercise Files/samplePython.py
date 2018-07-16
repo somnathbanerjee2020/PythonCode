@@ -1,9 +1,7 @@
-import pickle
+import sys
 
-l1=[1,2,3,4,5]
+print(sys.argv[1])
 
-f=open('datafile.txt','wb')
+import json
 
-pickle.dump(l1,f)
-
-f.close
+json.dump()
