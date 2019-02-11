@@ -1,8 +1,9 @@
 # import pySpark as ps
 # pandas is a dataframe library
+
+#import numpy
 import pandas as pd
 import os
-import pyspark
 
 # creating a pandas dataframe using a test csv
 os.chdir("c:/Users/banerso/Documents/GitHub/PythonCode/pySpark/")
