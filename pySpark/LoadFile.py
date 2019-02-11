@@ -1,7 +1,7 @@
 # import pySpark as ps
 # pandas is a dataframe library
 
-#import numpy
+import numpy as np
 import pandas as pd
 import os
 
