@@ -76,4 +76,4 @@ movies = [
 }
 ]
 
-print(movies[name] = "We Two")
+print(movies)
