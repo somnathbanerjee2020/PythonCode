@@ -1,28 +1,45 @@
 # 4. https://projecteuler.net/problem=4
 
+import string
+
 def checkPalindrome(num):
-    rev=0
-    temp=num
-    while(num>0):
-        dig=num%10
-        rev=rev*10+dig
-        num=num//10
-    if(temp==rev):
-        return(1)
+    n1=list(str(num))
+    n2=n1[::-1]
+    if n1 == n2:
+        return True
     else:
-        return(0)
+        return False
+
 
 if __name__ == "__main__":
-    first_num=999
-    second_num=999
-    for i in range(1,999):
-        first_num -= i
-        second_num -= (i-1)
-        product=first_num*second_num
-        #checkFirst
-        w=checkPalindrome(product)
-        if w == 1:
-            print(f'{product} is a palindrome')
+    #start with largest 3 digit numbers and moving down
+    f1=999
+    f2=999
+    f3=f2
+    out=0
+    all_dromes = []
+
+    while f1 >= 100:
+        f2=f3
+        product=f1*f2
+        if checkPalindrome(product):
+            print(product)
+            all_dromes.append(product)
+            break
         else:
-            #check again
+            while f2 >=100:
+                product=f1*f2
+                if checkPalindrome(product):
+                    #print(product)
+                    #out=1
+                    all_dromes.append(product)
+                    #break
+                f2 -= 1        
+        #if out ==1:
+        #    break
+        f1 -= 1
+    #print(f1)
+    #print(f2)
+    all_dromes.sort()
+    print(all_dromes)
 
